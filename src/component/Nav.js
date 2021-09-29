@@ -1,29 +1,73 @@
-import React from 'react'
+import React from "react";
+import {
+  AppBar,
+  Toolbar,
+  CssBaseline,
+  Typography,
+  makeStyles,
+  useTheme,
+  useMediaQuery,
+} from "@material-ui/core";
 import { Link } from "react-router-dom";
+import DrawerComponent from "./Drawer";
+
+const useStyles = makeStyles((theme) => ({
+  navlinks: {
+    marginLeft: theme.spacing(5),
+    display: "flex",
+  },
+  logo: {
+    flexGrow: "5",
+    cursor: "pointer",
+  },
+  link: {
+    textDecoration: "none",
+    color: "white",
+    fontSize: "20px",
+    marginLeft: theme.spacing(20),
+    "&:hover": {
+      color: "yellow",
+      borderBottom: "1px solid white",
+    },
+    app: {
+    background: "black",
+    color: "white",
+    },
+  },
+}));
 
 function Nav() {
-  const navStyle = {
-    color: 'white',
-    textDecoration:'none',
-    fontSize: '17px'
-    
-  };
-  return (
-    <nav>
-        <h3>Logo</h3>
-        <ul className="nav-links">
-            <Link to='/' style={navStyle}>
-              <li>Home</li>
-            </Link>
-            <Link to='/about' style={navStyle}> 
-              <li>about</li>
-            </Link>
-            <Link to='/contact' style={navStyle}> 
-              <li>contact me</li>
-            </Link>
-        </ul>
-    </nav>
-  )
-}
+  const classes = useStyles();
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-export default Nav
+  return (
+      <AppBar position="static">
+        <CssBaseline />
+        <Toolbar>
+          <Typography variant="h4" className={classes.logo}>
+            Navbar
+          </Typography>
+          {isMobile ? (
+            <DrawerComponent />
+          ) : (
+            <div className={classes.navlinks}>
+              <Link to="/" className={classes.link}>
+                Home
+              </Link>
+              <Link to="/about" className={classes.link}>
+                About
+              </Link>
+              <Link to="/experience" className={classes.link}>
+              Experience
+              </Link>
+              <Link to="/service" className={classes.link}>
+              Service
+              </Link>
+            </div>
+          )}
+        </Toolbar>
+      </AppBar>
+  );
+}
+export default Nav;
