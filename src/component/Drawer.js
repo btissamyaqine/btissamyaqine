@@ -19,14 +19,14 @@ const useStyles = makeStyles(()=>({
         
     },
     icon:{
-        color: "white"
+        color: "#FFC745",
     },
     list: {
       width: 400,
       color:'white',
     },
     MuiDrawer: {
-      backgroundColor: "#ffff00",
+      backgroundColor: "#FFC745",
     },
 }));
 
@@ -64,7 +64,7 @@ const classes = useStyles();
           </ListItem>
         </List>
       </Drawer>
-      <IconButton  className={classes.logo} onClick={() => setOpenDrawer(!openDrawer)}>
+      <IconButton  className={classes.icon} onClick={() => setOpenDrawer(!openDrawer)}>
         <MenuIcon />
       </IconButton>
     </>

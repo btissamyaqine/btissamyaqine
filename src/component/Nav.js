@@ -12,6 +12,9 @@ import { Link } from "react-router-dom";
 import DrawerComponent from "./Drawer";
 
 const useStyles = makeStyles((theme) => ({
+  appBar: {
+    background: "#14213d",
+  },
   navlinks: {
     marginLeft: theme.spacing(5),
     display: "flex",
@@ -19,19 +22,16 @@ const useStyles = makeStyles((theme) => ({
   logo: {
     flexGrow: "5",
     cursor: "pointer",
+    color:"#FFC745"
   },
   link: {
     textDecoration: "none",
-    color: "white",
+    color: "#FFC745",
     fontSize: "20px",
     marginLeft: theme.spacing(20),
     "&:hover": {
-      color: "yellow",
+      color: "#FFC745",
       borderBottom: "1px solid white",
-    },
-    app: {
-    background: "black",
-    color: "white",
     },
   },
 }));
@@ -42,11 +42,11 @@ function Nav() {
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   return (
-      <AppBar position="static">
+      <AppBar className={classes.appBar} position="static">
         <CssBaseline />
         <Toolbar>
           <Typography variant="h4" className={classes.logo}>
-            Navbar
+            Portfolio
           </Typography>
           {isMobile ? (
             <DrawerComponent />

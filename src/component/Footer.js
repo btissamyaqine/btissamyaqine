@@ -5,19 +5,26 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Facebook from "@material-ui/icons/Facebook";
 import Twitter from "@material-ui/icons/Twitter";
 import Instagram from "@material-ui/icons/Instagram";
+import Link from '@mui/material/Link';
 
 
 
 const useStyles = makeStyles({
   bottomNavContainer: {
-    // background: rgb(63,81,181),
+    background: "#fafafa",
+    position:"absolute",
+    bottom:"0",
+    width:"100%",
+    height:"90px",   /* Height of the footer */
+    
   },
   root: {
     "& .MuiSvgIcon-root": {
-      fill: "tan",
+      fill: "#14213d",
+      fontSize: "2rem",
       "&:hover": {
-        fill: "yellow",
-        fontSize: "1.8rem",
+        fill: "#fca311",
+        fontSize: "3rem",
       },
     },
   },
@@ -29,9 +36,15 @@ const Footer = () => {
 
   return (
     <BottomNavigation className={classes.bottomNavContainer}>
-      <BottomNavigationAction icon={<Facebook />} className={classes.root} />
-      <BottomNavigationAction icon={<Twitter />} className={classes.root} />
-      <BottomNavigationAction icon={<Instagram />} className={classes.root} />
+      <Link href="https://www.facebook.com/btissam.yaqine/" >
+          <BottomNavigationAction className={classes.root} label="Recents" icon={<Twitter />} />
+      </Link  >
+      <Link href="https://www.facebook.com/btissam.yaqine/" >
+          <BottomNavigationAction  icon={<Facebook />} className={classes.root} />
+      </Link  >
+      <Link href="https://www.instagram.com/iambtissam.yqn/?hl=fr" >
+          <BottomNavigationAction icon={<Instagram />} className={classes.root}/>
+      </Link  >
     </BottomNavigation>
   );
 };

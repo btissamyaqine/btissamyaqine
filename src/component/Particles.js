@@ -5,11 +5,11 @@ import { makeStyles } from "@material-ui/core/styles";
 const useStyles = makeStyles((theme) => ({
   particlesCanvas: {
     position: "fixed",
-    opacity: "0.3"
+    opacity: "1"
   },
 }));
 
-const HeaderPar = () => {
+const Particles = () => {
   const classes = useStyles();
 
   return (
@@ -24,11 +24,14 @@ const HeaderPar = () => {
               value_area: 800,
             },
           },
+          color: {
+            value: '#fca311'
+          },
           shape: {
             type: "circle",
             stroke: {
               width: 1,
-              color: "tomato",
+              color: "black",
             },
           },
           size: {
@@ -42,7 +45,7 @@ const HeaderPar = () => {
             },
           },
           opacity: {
-            value: 0.5,
+            value: 40,
             random: true,
             anim: {
               enable: true,
@@ -57,4 +60,4 @@ const HeaderPar = () => {
   );
 };
 
-export default HeaderPar;
+export default Particles;

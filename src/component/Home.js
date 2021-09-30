@@ -1,13 +1,15 @@
 import React from "react";
 import Header from "./Header";
-import HeaderPar from "./HeaderPar";
+import Particles from "./Particles";
+import Footer from "./Footer"
 
 const Home = () => {
   return (
-    <div>
+    <React.Fragment>
       <Header />
-      <HeaderPar />
-    </div>
+      <Particles />
+      <Footer />
+    </React.Fragment>
       
   );
 };
