@@ -58,12 +58,13 @@ function Nav() {
               <Link to="/about" className={classes.link}>
                 About
               </Link>
+              <Link to="/Project" className={classes.link}>
+              Project
+              </Link>
               <Link to="/experience" className={classes.link}>
               Experience
               </Link>
-              <Link to="/service" className={classes.link}>
-              Service
-              </Link>
+              
             </div>
           )}
         </Toolbar>
