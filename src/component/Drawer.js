@@ -31,12 +31,12 @@ const useStyles = makeStyles(()=>({
 }));
 
 function DrawerComponent() {
-const classes = useStyles();
+  const classes = useStyles();
+
   const [openDrawer, setOpenDrawer] = useState(false);
   return (
     <>
       <Drawer
-      
         open={openDrawer}
         onClose={() => setOpenDrawer(false)}
         className={classes.MuiDrawer}
@@ -54,12 +54,12 @@ const classes = useStyles();
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link className={classes.link} to="/experience">Experience</Link>
+              <Link className={classes.link} to="/Project">Project</Link>
             </ListItemText>
           </ListItem>
           <ListItem onClick={() => setOpenDrawer(false)}>
             <ListItemText>
-              <Link className={classes.link} to="/service">Service</Link>
+              <Link className={classes.link} to="/Skills">Skills</Link>
             </ListItemText>
           </ListItem>
         </List>

@@ -1,7 +1,7 @@
 import React from "react";
 import Nav from "./component/Nav";
 import About from "./component/About";
-import Experience from "./component/Skills";
+import Skills from "./component/Skills";
 import Project from "./component/Project";
 import Home from "./component/Home";
 
@@ -16,7 +16,7 @@ function App() {
           <Route path="/" exact component={Home}/>
             <Route path="/about" component={About}/>
             <Route path="/Project" component={Project} />
-            <Route path="/experience" component={Experience}/>
+            <Route path="/skills" component={Skills}/>
           </Switch>
     </Router>
   
