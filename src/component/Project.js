@@ -11,10 +11,6 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { Link } from 'react-router-dom';
 
-import project1 from "../image/logo-xampp-1.jpg";
-import project2 from "../image/LAMP.jpg";
-
-
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     background: "#14213D",
@@ -28,6 +24,7 @@ const useStyles = makeStyles((theme) => ({
     width: "345px",
     
   },
+ 
   
 }));
 
