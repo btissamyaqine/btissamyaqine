@@ -37,6 +37,12 @@ const projects = [
     href: "https://github.com/btissamyaqine/Human-Resource-Management",
   },
   {
+    name: "Memories-app-mern-Stack",
+    description: `A complete social media application using React, Node.js, Express and MongoDB,
+    then deployed to heroku and netlify.`,
+    href:"https://github.com/btissamyaqine/Memories-app-mern-Stack"
+  },
+  {
     name: "Restaurant Management “Noa-App” ",
     description: `is an open source Restaurant Management application 
     written in XAMP Stack allows you to manage the operations of your restaurant. 
@@ -73,6 +79,7 @@ const projects = [
     know how many movies we hane in our list and update our state`,
     href:"https://github.com/btissamyaqine/Context_Api_React"
   },
+  
 ];
 
 const Project = () => {

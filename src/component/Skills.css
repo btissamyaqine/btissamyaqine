@@ -1,29 +1,47 @@
-.about-section {
+/* .about-section {
   position: relative !important;
   padding-top: 150px !important;
   padding-bottom: 30px !important;
   background-image: var(--section-background-color) !important;
   color: white !important;
-}
+  justify-content: space-between;
+} */
 
 .tech-icons {
-  font-size: 4.5em !important;
-  margin: 15px !important;
-  padding: 10px !important;
+  font-size: 5.7em ;
+  /* margin-top: 6px ; */
+  padding: 10px;
   opacity: 0.93 !important;
-  border: 1.7px solid rgba(200, 137, 230, 0.637) !important;
+  /* border: 1.7px solid rgba(200, 137, 230, 0.637) !important; */
   vertical-align: middle !important;
   text-align: center !important;
-  border-radius: 5px !important;
+  /* border-radius: 5px !important; */
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  /* box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important; */
   overflow: hidden !important;
   transition: all 0.4s ease 0s !important;
-}
+  justify-content: space-between;
+  justify-content: space-evenly
 
+}
+.tech-title {
+ font-size: 15px;
+ margin: 15px !important;
+padding: 10px !important;
+  
+}
+.tech-iconsPlus {
+  padding: 30px;
+  /* justify-content: space-between; */
+  justify-content: space-evenly;
+  margin-top: 40px ;
+
+  
+
+}
 @media (max-width: 767px) {
   .tech-icons {
-    margin: 10px !important;
+    margin: 30px !important;
   }
 }
 
@@ -33,15 +51,15 @@
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
 .tech-icon-images {
-  padding: 20px !important;
+  padding: 10px !important;
   line-height: 1.6 !important;
 }
 
-.quote-card-view {
+/* .quote-card-view {
   border: none !important;
   color: white !important;
   background-color: transparent !important;
-}
+} */
 
 .about-activity {
   list-style: none !important;
@@ -51,6 +69,6 @@
 
 @media (max-width: 767px) {
   .about-img {
-    padding-top: 0 !important;
+    padding-top: 3px !important;
   }
 }

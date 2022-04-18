@@ -14,6 +14,9 @@ import EmailIcon from '@material-ui/icons/Email';
 import PhoneIcon from '@material-ui/icons/Phone';
 import EventNoteIcon from '@material-ui/icons/EventNote';
 import HomeIcon from '@material-ui/icons/Home';
+import { SiLinkedin, SiHomeassistant } from "react-icons/si";
+import { BsTelephoneFill, BsGithub } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 
 const useStyles = makeStyles((theme) => ({
   left:{
@@ -37,7 +40,13 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     color: "#e5e5e5",
-    padding:"2px",
+    padding:"3px",
+    fontSize: "20px",
+  },
+  infos: {
+    color: "#e5e5e5",
+    padding:"3px",
+    fontSize: "15px",
   },
   mainContainer: {
     background: "#e5e5e5",
@@ -61,12 +70,12 @@ const useStyles = makeStyles((theme) => ({
 const projects = [
   { 
     name: "Btissam YAQINE",
-    about: `I'm Ibtissam YAQINE, 20 years old, I'm full stack web 
-    developer with over than 2 years of experience. I adapt, 
-    I learn quickly and I’m passionate about new technologies.`,
+    about: `Hardworking College Student seeking employment. 
+    Bringing forth a motivated attitude and a variety of powerful skills. 
+    Committed to utilizing my skills to further the mission of a company.`,
 
     presentationFirst: "Hello Everybody I'am",
-    presentationSecond: "Full Stack Web Developer"
+    presentationSecond: "Junior Web Developer"
   }
 ];
 
@@ -105,7 +114,7 @@ const About = () => {
                     {project.name}
                   </Typography>
                   <Typography className={classes.subtitle} variant="body2" gutterBottom>
-                    {project.presentationFirst}
+                    {project.presentationSecond}
                   </Typography>
                   
                 </CardContent>
@@ -115,10 +124,11 @@ const About = () => {
                     {project.about}
                   </Typography>
               </CardActions>
-              <Typography className={classes.subtitle} variant="body1" ><EventNoteIcon />11 Nouvenbre 2000</Typography>
-              <Typography className={classes.subtitle} variant="body1" ><EmailIcon />btissamyaqine123@gmail.com</Typography>
-                <Typography className={classes.subtitle} variant="body1" ><PhoneIcon />0687965432</Typography>
-                <Typography className={classes.subtitle} variant="body1" ><HomeIcon />Province Khouribga</Typography>
+                <Typography className={classes.infos} variant="body1" ><MdEmail /> btissamyaqine123@gmail.com</Typography>
+                <Typography className={classes.infos} variant="body1" ><SiLinkedin /><a href="https://www.linkedin.com/in/btissamyaqine/">Linkdin</a></Typography>
+                <Typography className={classes.infos} variant="body1" ><BsGithub /> Khouribga</Typography>
+                <Typography className={classes.infos} variant="body1" ><SiHomeassistant /> Khouribga</Typography>
+                <Typography className={classes.infos} variant="body1" ><BsTelephoneFill />  0687965432</Typography>
             </Card>
           </Grid>
         ))}
